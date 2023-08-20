@@ -23,7 +23,7 @@ export default function Home() {
     }
 
     // Fetching all posts
-    fetch("http://localhost:5000/allposts", {
+    fetch("https://insta1-wpz7.onrender.com/allposts", {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
@@ -47,7 +47,7 @@ export default function Home() {
   };
 
   const likePost = (id) => {
-    fetch("http://localhost:5000/like", {
+    fetch("https://insta1-wpz7.onrender.com/like", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -71,7 +71,7 @@ export default function Home() {
       });
   };
   const unlikePost = (id) => {
-    fetch("http://localhost:5000/unlike", {
+    fetch("https://insta1-wpz7.onrender.com/unlike", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -97,7 +97,7 @@ export default function Home() {
 
   // function to make comment
   const makeComment = (text, id) => {
-    fetch("http://localhost:5000/comment", {
+    fetch("https://insta1-wpz7.onrender.com/comment", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
